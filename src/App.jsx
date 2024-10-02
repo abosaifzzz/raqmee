@@ -12,13 +12,8 @@ import img7 from '../src/assets/img7.jpg';
 import img8 from '../src/assets/img8.jfif';
 import img9 from '../src/assets/img9.jfif';
 import img10 from '../src/assets/img10.jpg';
-import img11 from '../src/assets/img11.jpg';
-import img12 from '../src/assets/img12.png';
-import img13 from '../src/assets/img13.jpg';
-import img14 from '../src/assets/img14.jfif';
-import img15 from '../src/assets/img15.jpg';
 
-// Example product data with seller images
+
 const productData = [
   { id: 1, name: 'Ahemise with red hat', price: 45, description: 'A stylish red hat.', category: 'Fashion', seller: 'Sarah Welson', sellerImage: img2, image: img4 },
   { id: 2, name: 'Shemise with red hat', price: 30, description: 'A comfortable shemise.', category: 'Fashion', seller: 'Maria Johan', sellerImage: img2, image: img5 },
@@ -102,7 +97,6 @@ function App() {
       return updatedProducts;
     });
 
-    // Clear input fields
     nameRef.current.value = '';
     priceRef.current.value = '';
     descriptionRef.current.value = '';
@@ -312,7 +306,7 @@ function App() {
               <div className="product-name-price-heart mt-2 flex justify-between">
                 <div className="name-price">
                   <p className="lg:text-xs text-lg text-gray-600 font-medium">{product.name}</p>
-                  <p className="font-medium lg:text-base text-lg">${product.price.toFixed(2)}</p>
+                  <p className="font-medium lg:text-base text-lg">£{product.price.toFixed(2)}</p>
                 </div>
                 <div className="heart border flex justify-center items-center w-9 h-9 rounded-md"><i className="fa-regular hover:text-red-600 cursor-pointer fa-heart"></i></div>
               </div>
@@ -332,7 +326,6 @@ function App() {
           ))}
         </div>
 
-        {/* Pagination */}
         <div className="pagination mt-11 flex justify-between items-center gap-4">
           <button
             onClick={handlePrevPage}
